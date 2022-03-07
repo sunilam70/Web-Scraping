@@ -8,8 +8,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape_all():
     # Initiate headless driver for deployment
-    executable_path = {'executable_path': "ChromeDriver.exe"}
-    browser = Browser('chrome', **executable_path, headless=True)
+    executable_path = {'executable_path': ChromeDriverManager().install()}
+    browser = Browser('chrome', **executable_path, headless=False)
+    #executable_path = {'executable_path': "ChromeDriver.exe"}
+    #browser = Browser('chrome', **executable_path, headless=True)
 
     news_title, news_paragraph = mars_news(browser)
 
