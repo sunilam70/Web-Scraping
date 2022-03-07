@@ -54,13 +54,13 @@
         </div>
       </div>
 
-      <!-- Section for Mars Hemispheres -->
-      <div class="row" id="mars-hemispheres">
+      <!-- Section for Mars Hemisphere -->
+      <div class="row" id="mars-hemisphere">
         <div class="page-header">
-          <h2 class="text-center">Mars Hemispheres</h2>
+          <h2 class="text-center">Mars Hemisphere</h2>
         </div>
 
-        {% for hemisphere in mars.hemispheres %}
+        {% for hemisphere in mars.hemisphere %}
         <div class="col-md-6">
           <div class="thumbnail">
             <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
